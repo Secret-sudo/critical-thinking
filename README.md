@@ -21,21 +21,63 @@ Critically: the skill does not soften under pushback, and it never ends with enc
 
 Research from 2024–2026 shows that frequent AI use correlates with reduced critical thinking, mediated by cognitive offloading (Gerlich 2025). Microsoft and Carnegie Mellon found that higher confidence in AI leads to less critical engagement with its outputs (Lee et al. 2025). And the "metacognitive laziness" research (Fan et al. 2024, MIT Media Lab 2025) shows users can produce good outputs while retaining less of the material and losing the ability to defend it.
 
-The skill is a structured intervention against those patterns. It is friction that you missed during the session, delivered at the moment before you publish.
+The skill is a structured intervention against those patterns. It is friction you missed during the session, delivered at the moment before you publish.
 
 Full research citations and caveats are in `references/research-foundation.md`.
 
+---
+
 ## How to install
 
-This is a Claude skill. You can install it in any Claude product that supports skills:
+You do not need to know how to code to install this skill. Follow the steps below for the Claude product you use.
 
-**Option 1 — Use the packaged `.skill` file:**
-Download `critical-thinking.skill` from the [Releases page](../../releases) and upload it to Claude when prompted to add a skill.
+### Quick overview
 
-**Option 2 — Use the source files directly:**
-Clone or download this repository and point Claude to the `critical-thinking/` folder as a skill directory.
+1. Download the file `critical-thinking.skill` from this repository's [Releases page](../../releases).
+2. Open Claude, find the Skills settings for your product, and upload the file there.
+3. Enable the skill.
 
-## How to use
+Skills currently work in Claude.ai (Pro, Max, Team, Enterprise plans), Claude Code, and via the Claude API. Installation works slightly differently on each. Below are the most common paths.
+
+### For Claude.ai (web app and mobile — most common)
+
+You need a **paid plan** (Pro, Max, Team, or Enterprise) for custom skill uploads. Free plans can use Anthropic's pre-built skills but cannot currently upload custom ones.
+
+**Before uploading:** Make sure "Code execution and file creation" is enabled in your settings. This is what powers skills. On Free/Pro/Max plans, go to `Settings > Capabilities`. On Team/Enterprise plans, your organization owner enables this in `Organization settings`.
+
+**To upload the skill:**
+
+1. Download `critical-thinking.skill` from the [Releases page](../../releases) to your computer.
+2. Open Claude.ai in your browser.
+3. Go to `Settings` (usually found by clicking your profile picture or name in the sidebar).
+4. Look for `Customize` in the menu, then `Skills`.
+5. Click the upload button (wording varies — it may say "Upload skill", "Add skill", or show a "+" icon).
+6. Select the `critical-thinking.skill` file you downloaded.
+7. Once uploaded, make sure the toggle next to "critical-thinking" is switched on.
+
+That is it. In your next conversation, you can trigger the skill by saying things like "run a critical thinking check on this session" or "am I ready to publish this?".
+
+### For Claude Code (developer tool)
+
+If you use Claude Code: clone this repository, then copy the `critical-thinking/` folder into your `~/.claude/skills/` directory. Claude Code will pick it up automatically. See [Claude Code Skills documentation](https://code.claude.com/docs/en/skills) for details.
+
+### For the Claude API
+
+Skills in the API are uploaded via the Skills endpoint. See [Anthropic's Skills API Quickstart](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) for code examples. Note that skills uploaded via the API are separate from skills uploaded to Claude.ai — you need to upload to each surface independently.
+
+### Official documentation — always more current than this README
+
+Anthropic updates the skills feature regularly, so interface details may change. For the most current installation steps, see:
+
+- [Use Skills in Claude — Help Center](https://support.claude.com/en/articles/12512180-use-skills-in-claude) — general Claude.ai guide
+- [Agent Skills Overview — API Docs](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) — for API and developers
+- [Extend Claude with skills — Claude Code Docs](https://code.claude.com/docs/en/skills) — for Claude Code users
+
+If the steps above do not match what you see in the Claude interface, the official documentation is the source of truth.
+
+---
+
+## How to use the skill after installation
 
 In any Claude session, at the end of substantive work, say something like:
 
@@ -71,6 +113,8 @@ critical-thinking/
     ├── research-foundation.md        # Academic grounding and citations
     └── examples.md                   # Two worked review examples
 ```
+
+The `critical-thinking.skill` file in the [Releases page](../../releases) is a packaged version of the three files above, ready to upload directly to Claude.
 
 ## License
 
