@@ -37,7 +37,7 @@ You do not need to know how to code to install this skill. Follow the steps belo
 2. Open Claude, find the Skills settings for your product, and upload the file there.
 3. Enable the skill.
 
-Skills currently work in Claude.ai (Pro, Max, Team, Enterprise plans), Claude Code, and via the Claude API. Installation works slightly differently on each. Below are the most common paths.
+Skills currently (2026-April) work in Claude.ai (Pro, Max, Team, Enterprise plans), Claude Code, and via the Claude API. Installation works slightly differently on each. Below are the most common paths.
 
 ### For Claude.ai (web app and mobile — most common)
 
